@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'dummydata.dart';
-import './categories_screen.dart';
-import './categorymeals.dart';
+import '../dummydata.dart';
+import '../Screens/categories_screen.dart';
+import '../Screens/categorymeals.dart';
 
 
 
@@ -10,12 +10,12 @@ class CategoryItem extends StatelessWidget {
 final String categoryId;
 final String categoryTitle;
 final Color color;
-CategoryItem( this.categoryId, this.categoryTitle,this.color);
+const CategoryItem( this.categoryId, this.categoryTitle,this.color);
 
 void Selectcategory(BuildContext ctx)
 {
  Navigator.of(ctx).push(MaterialPageRoute(builder: (_){
-  return Categorymeals(categoryTitle);
+  return Categorymeals(categoryTitle, categoryId);
  },),);
 }
 

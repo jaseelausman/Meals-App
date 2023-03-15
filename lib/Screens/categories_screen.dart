@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import './dummydata.dart';
-import './categoryitem.dart';
+import '../dummydata.dart';
+import '../widgets/categoryitem.dart';
 
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({super.key});
