@@ -25,6 +25,8 @@ Categorymeals( this.name,  this.id);
         duration: categorymeals[index].duration,
         affordability: categorymeals[index].affordability,
         complexity: categorymeals[index].complexity,
+        id:categorymeals[index].id,
+     
         );
       },itemCount: categorymeals.length,
       

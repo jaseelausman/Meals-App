@@ -10,9 +10,7 @@ class CategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return Scaffold(
-      appBar: AppBar(title: Text("DeliMeal")),
-      body:GridView(
+    return GridView(
       padding:EdgeInsets.all(15),
       
      
@@ -28,7 +26,7 @@ class CategoriesScreen extends StatelessWidget {
       DUMMY_CATEGORIES.map((category)=>
       CategoryItem(category.id,category.title,category.color)
       ).toList(),
-    )
+    
     );
     
   }

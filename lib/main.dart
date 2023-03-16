@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Screens/categories_screen.dart';
+import './Screens/tabs_screen.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -8,7 +9,7 @@ void main() {
     primarySwatch: Colors.amber,
     
     ),
-    home: CategoriesScreen(),
+    home: TabsScreen(),
   )
     );
     
