@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:meals_app/Screens/categories_screen.dart';
 import '../Screens/favourites_screen.dart';
+import 'main_drawer.dart';
 
 class TabsScreen extends StatefulWidget {
   const TabsScreen({super.key});
@@ -42,32 +43,7 @@ void _selectPage(int index)
     ),
     
     body:_pages[_selectpageindex],
-    drawer: Drawer(child:
-    Column(
-      children: [
-        Container(height: 130,
-        width: double.infinity,
-        color: Colors.amber,
-        alignment: Alignment.bottomLeft,
-
-        child:Text("Cooking Up",style:TextStyle(fontSize: 30,fontWeight: FontWeight.bold)),
-        
-        ),
-       SizedBox(height: 10,),
-       ListTile(
-      
-        leading: Icon(Icons.restaurant),
-        title: Text("Meals",style:TextStyle(fontSize: 20)),
-        
-       ),
-        ListTile(
-        
-        leading: Icon(Icons.star),
-        title: Text("Favourites",style:TextStyle(fontSize: 20)),
-       )
-      ],
-    )
-    ),
+    drawer:  MainDrawer(),
     bottomNavigationBar: BottomNavigationBar(
       onTap: _selectPage,
       items: [

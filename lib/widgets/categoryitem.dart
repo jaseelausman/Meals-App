@@ -25,7 +25,7 @@ void Selectcategory(BuildContext ctx)
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap:()=>Selectcategory(context),
+     onTap:()=>Selectcategory(context),
       splashColor: Colors.red,
       child: Container(
         padding:EdgeInsets.all(15),
