@@ -32,7 +32,6 @@ void _selectPage(int index)
 }
 
 
-
   @override
   Widget build(BuildContext context) {
     return DefaultTabController
@@ -41,7 +40,34 @@ void _selectPage(int index)
     appBar:AppBar(title: Text("Meals App"),
    
     ),
+    
     body:_pages[_selectpageindex],
+    drawer: Drawer(child:
+    Column(
+      children: [
+        Container(height: 130,
+        width: double.infinity,
+        color: Colors.amber,
+        alignment: Alignment.bottomLeft,
+
+        child:Text("Cooking Up",style:TextStyle(fontSize: 30,fontWeight: FontWeight.bold)),
+        
+        ),
+       SizedBox(height: 10,),
+       ListTile(
+      
+        leading: Icon(Icons.restaurant),
+        title: Text("Meals",style:TextStyle(fontSize: 20)),
+        
+       ),
+        ListTile(
+       
+        leading: Icon(Icons.star),
+        title: Text("Favourites",style:TextStyle(fontSize: 20)),
+       )
+      ],
+    )
+    ),
     bottomNavigationBar: BottomNavigationBar(
       onTap: _selectPage,
       items: [
