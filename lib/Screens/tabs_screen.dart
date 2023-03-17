@@ -61,7 +61,7 @@ void _selectPage(int index)
         
        ),
         ListTile(
-       
+        
         leading: Icon(Icons.star),
         title: Text("Favourites",style:TextStyle(fontSize: 20)),
        )
