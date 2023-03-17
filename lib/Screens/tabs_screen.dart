@@ -14,26 +14,43 @@ class TabsScreen extends StatefulWidget {
 }
 
 class _TabsScreenState extends State<TabsScreen> {
+
+ final List<Widget> _pages=[
+  CategoriesScreen(),
+  Favorites(),
+];
+
+int _selectpageindex=0;
+
+
+
+void _selectPage(int index)
+{
+ setState(() {
+   _selectpageindex=index;
+ });
+}
+
+
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController
     (length: 2, child: 
     Scaffold(
     appBar:AppBar(title: Text("Meals App"),
-    bottom: TabBar(tabs:[ 
-    Tab(
-      icon: Icon(
-        Icons.home)
-        ,text: "Categories",),
-    Tab(icon:Icon(Icons.star),text:"Favourites"),
-    ],
-    )
+   
     ),
-    body: TabBarView(children: [
-      CategoriesScreen(),
-      Favorites(),
-    ]),
-    ));
+    body:_pages[_selectpageindex],
+    bottomNavigationBar: BottomNavigationBar(
+      onTap: _selectPage,
+      items: [
+      BottomNavigationBarItem(icon: Icon(Icons.category),label:"categories"
+      ),
+      BottomNavigationBarItem(icon: Icon(Icons.favorite),label:"Favourites")
+    ],),
+    )
+    );
     
   }
 }
